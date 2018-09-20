@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root_vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../assets/SOConsole.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="top_section_hbox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" styleClass="background" VBox.vgrow="NEVER">
+         <children>
+            <VBox fx:id="top_left_section_vbox" prefHeight="50.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <MenuButton fx:id="main_menu_menbtn" mnemonicParsing="false" styleClass="description_label" text="Archivo">
+                    <items>
+                        <MenuItem fx:id="start_menitm" mnemonicParsing="false" onAction="#LaunchBlocNotas" text="Start" />
+                      <MenuItem fx:id="new_menitm" disable="true" mnemonicParsing="false" text="New" visible="false" />
+                      <MenuItem fx:id="open_menitm" disable="true" mnemonicParsing="false" text="Open" visible="false" />
+                        <MenuItem fx:id="save_menitm" disable="true" mnemonicParsing="false" text="Save" visible="false" />
+                    </items>
+                  </MenuButton>
+               </children>
+            </VBox>
+            <VBox fx:id="topr_right_section_vbox" prefHeight="50.0" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox fx:id="working_area_hbox" alignment="CENTER" prefHeight="300.0" prefWidth="600.0" styleClass="background_4" VBox.vgrow="ALWAYS">
+         <children>
+            <Label fx:id="welcome_screen_lbl" styleClass="description_label" text="Bloc de Notas 3.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="bottom_section_hbox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" styleClass="background_2" VBox.vgrow="NEVER">
+         <children>
+            <VBox fx:id="bottom_left_section_vbox" prefHeight="50.0" prefWidth="300.0" HBox.hgrow="ALWAYS" />
+            <VBox fx:id="bottom_right_section" prefHeight="50.0" prefWidth="300.0" HBox.hgrow="ALWAYS" />
+         </children></HBox>
+   </children>
+</VBox>

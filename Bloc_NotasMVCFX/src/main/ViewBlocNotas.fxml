@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root_vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../assets/SOConsole.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="top_section_hbox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" styleClass="background" VBox.vgrow="NEVER">
+         <children>
+            <VBox fx:id="top_left_section_vbox" prefHeight="50.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <MenuButton fx:id="main_menu_menbtn" mnemonicParsing="false" styleClass="description_label" text="Actions">
+                     <items>
+                        <MenuItem fx:id="new_menitm" mnemonicParsing="false" onAction="#NewFile" text="New" />
+                        <MenuItem fx:id="open_menitm" mnemonicParsing="false" onAction="#OpenFile" text="Open" />
+                        <MenuItem fx:id="save_menitm" mnemonicParsing="false" onAction="#SaveFile" text="Save" />
+                     </items>
+                  </MenuButton>
+               </children>
+            </VBox>
+            <VBox fx:id="topr_right_section_vbox" prefHeight="50.0" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox fx:id="working_area_hbox" alignment="CENTER" prefHeight="300.0" prefWidth="600.0" styleClass="background_4" VBox.vgrow="ALWAYS">
+         <children>
+            <TextArea fx:id="main_display_txtarea" prefHeight="300.0" prefWidth="465.0" promptText="Write here..." HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </TextArea>
+         </children>
+      </HBox>
+      <HBox fx:id="bottom_section_hbox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" styleClass="background_2" VBox.vgrow="NEVER">
+         <children>
+            <VBox fx:id="bottom_right_section_vbox" alignment="CENTER" prefHeight="50.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="cipher_btn" minWidth="150.0" mnemonicParsing="false" onAction="#CipherFile" styleClass="quick_menu_button" text="Cipher" />
+               </children>
+            </VBox>
+            <VBox fx:id="bottom_left_section_vbox" alignment="CENTER" prefHeight="50.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="decipher_btn" minWidth="150.0" mnemonicParsing="false" onAction="#DecipherFile" styleClass="quick_menu_button" text="Decipher" />
+               </children>
+            </VBox>
+         </children></HBox>
+   </children>
+</VBox>
