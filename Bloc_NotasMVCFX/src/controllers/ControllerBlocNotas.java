@@ -40,6 +40,7 @@ public class ControllerBlocNotas implements Initializable {
         if(model_bloc_notas.getResult().get() == ButtonType.YES){
             System.out.println("user's confirmation choice: YES");
             SaveFile(event);
+            main_display_txtarea.setText("");
         }
         else if (model_bloc_notas.getResult().get() == ButtonType.NO){
             System.out.println("user's confirmation choice: NO");
