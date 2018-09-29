@@ -1,9 +1,10 @@
 # Bloc_Notas_FX
+Diseñar y crear una aplicación en java utilizando el paradigma de diseño MVC que realice lo siguiente:
 
--Abir mostrará un cuadro de dialogo para abrira un archivo de texto en cualquier ubicación y mostrará su contenido en el JTextArea.
+1.- Crear una interfaz que contenga un JTextArea.
 
--Cifrar aplicará el cifrado Cesar al texto abierto y lo mostrará en el JTextArea.
+2.- Colocar un menú Archivo y dos JMenuItem (Abrir y Guardar).
 
--Descifrar aplicará el cifrado Cesar de forma inversa para obtener el texto origal y mostrarlo en el JTextArea.
+3.- El JMenuIntem Abir mostrará un cuadro de dialogo para abrira un archivo de texto en cualquier ubicación y mostrará su contenido en el JTextArea.
 
--Guardará los cambios realizados en el JTextArea en el archivo texto abierto
+4.- El JMenuIntem guardar guardará los cambios realizados en el JTextArea en el archivo texto abierto
