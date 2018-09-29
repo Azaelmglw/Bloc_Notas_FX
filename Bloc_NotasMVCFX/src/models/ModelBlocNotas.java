@@ -17,12 +17,9 @@ public class ModelBlocNotas {
     
     private final ModelMain model_main;
     
-    private Optional <String> user_dialog_input;
     private Optional <ButtonType> result;
     
     private String text;
-    private String cipher_key;
-    
     
     private File text_file;
     private FileReader file_reader;
@@ -68,49 +65,6 @@ public class ModelBlocNotas {
         catch(IOException e){
             model_main.getAlert(1).setContentText("Err 001: The file couldn't be read: " + e);
         }
-    }
-    
-    public void CipherFileContents(){
-        RequestCipherKey();
-        int cipher_key = 0;
-        String ciphered_text = "";
-        
-        for(int x = 0; x < this.cipher_key.length(); x ++){
-            cipher_key += (int)this.cipher_key.charAt(x);
-        }
-        
-        for(int y = 0; y < text.length(); y ++){
-            ciphered_text += (char)((int)text.charAt(y) + cipher_key);
-        }
-        text = ciphered_text;
-        System.out.println("Key provided :" + cipher_key);
-    }
-    
-    public void DecipherFileContents(){
-        RequestCipherKey();
-        int cipher_key = 0;
-        String ciphered_text = "";
-        
-        for(int x = 0; x < this.cipher_key.length(); x ++){
-            cipher_key += (int)this.cipher_key.charAt(x);
-        }
-        
-        for(int y = 0; y < text.length(); y ++){
-            ciphered_text += (char)((int)text.charAt(y) - cipher_key);
-        }
-        text = ciphered_text;
-        System.out.println("Key provided :" + cipher_key);
-        
-        
-    }
-    
-    public void RequestCipherKey(){
-        model_main.getTextInputDialog(0).setTitle("Input Required");
-        model_main.getTextInputDialog(0).setHeaderText("Write the cipher key to apply to the document: ");
-        model_main.getTextInputDialog(0).setContentText("Cipher Key");
-        user_dialog_input = model_main.getTextInputDialog(0).showAndWait();
-        this.cipher_key = user_dialog_input.get();
-        model_main.getTextInputDialog(0).getEditor().clear();
     }
     
     public void SaveCurrentChangesConfirmationRequest(){

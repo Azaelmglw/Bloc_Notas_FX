@@ -2,6 +2,7 @@ package main;
 
 import models.*;
 import controllers.*;
+import java.io.File;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,7 +15,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextInputDialog;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -88,15 +88,10 @@ public class Main extends Application{
             
             //  File Choosers Declaration.
             FileChooser text_file_chooser = new FileChooser();
+            text_file_chooser.setInitialDirectory(new File (System.getProperty("user.home") + System.getProperty("file.separator") + "Documents"));
             
             //  File Choosers Assignation.
             model_main.setFileChooser(0, text_file_chooser);
-            
-            //  Input Dialogs Declaration.
-            TextInputDialog key_request = new TextInputDialog();
-            
-            //  Input Dialogs Assignation.
-            model_main.setTextInputDialog(0, key_request);
             
             //  Alerts Declaration.
             Alert confirmation_alert = new Alert(AlertType.CONFIRMATION);
@@ -110,7 +105,7 @@ public class Main extends Application{
             
             /*  Only the <<main>> UI is set in this method, all of the other manipulations of <<primaryStage>>
             need to be declared in it's respective Controllers.*/
-            primaryStage.setTitle("Bloc de Notas 3.0");
+            primaryStage.setTitle("Bloc de Notas V0.1");
             primaryStage.setScene(main_scene);
             primaryStage.show();
         } 

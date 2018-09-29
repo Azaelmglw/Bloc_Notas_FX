@@ -14,7 +14,6 @@
                <children>
                   <MenuButton fx:id="main_menu_menbtn" mnemonicParsing="false" styleClass="description_label" text="Actions">
                      <items>
-                        <MenuItem fx:id="new_menitm" mnemonicParsing="false" onAction="#NewFile" text="New" />
                         <MenuItem fx:id="open_menitm" mnemonicParsing="false" onAction="#OpenFile" text="Open" />
                         <MenuItem fx:id="save_menitm" mnemonicParsing="false" onAction="#SaveFile" text="Save" />
                      </items>
@@ -36,18 +35,6 @@
             </TextArea>
          </children>
       </HBox>
-      <HBox fx:id="bottom_section_hbox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" styleClass="background_2" VBox.vgrow="NEVER">
-         <children>
-            <VBox fx:id="bottom_right_section_vbox" alignment="CENTER" prefHeight="50.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
-               <children>
-                  <Button fx:id="cipher_btn" minWidth="150.0" mnemonicParsing="false" onAction="#CipherFile" styleClass="quick_menu_button" text="Cipher" />
-               </children>
-            </VBox>
-            <VBox fx:id="bottom_left_section_vbox" alignment="CENTER" prefHeight="50.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
-               <children>
-                  <Button fx:id="decipher_btn" minWidth="150.0" mnemonicParsing="false" onAction="#DecipherFile" styleClass="quick_menu_button" text="Decipher" />
-               </children>
-            </VBox>
-         </children></HBox>
+      <HBox fx:id="bottom_section_hbox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" styleClass="background_2" VBox.vgrow="NEVER" />
    </children>
 </VBox>

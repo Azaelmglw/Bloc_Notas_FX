@@ -33,7 +33,7 @@
       <HBox fx:id="bottom_section_hbox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" styleClass="background_2" VBox.vgrow="NEVER">
          <children>
             <VBox fx:id="bottom_left_section_vbox" prefHeight="50.0" prefWidth="300.0" HBox.hgrow="ALWAYS" />
-            <VBox fx:id="bottom_right_section" prefHeight="50.0" prefWidth="300.0" HBox.hgrow="ALWAYS" />
+            <VBox fx:id="bottom_right_section_vbox" prefHeight="50.0" prefWidth="300.0" HBox.hgrow="ALWAYS" />
          </children></HBox>
    </children>
 </VBox>
