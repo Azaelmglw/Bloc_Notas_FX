@@ -88,7 +88,7 @@ public class Main extends Application{
             
             //  File Choosers Declaration.
             FileChooser text_file_chooser = new FileChooser();
-            text_file_chooser.setInitialDirectory(new File (System.getProperty("user.home") + System.getProperty("file.separator") + "Documents"));
+            text_file_chooser.setInitialDirectory(new File (System.getProperty("user.home")));
             
             //  File Choosers Assignation.
             model_main.setFileChooser(0, text_file_chooser);
@@ -105,7 +105,7 @@ public class Main extends Application{
             
             /*  Only the <<main>> UI is set in this method, all of the other manipulations of <<primaryStage>>
             need to be declared in it's respective Controllers.*/
-            primaryStage.setTitle("Bloc de Notas V0.1");
+            primaryStage.setTitle("Bloc de Notas V0.2");
             primaryStage.setScene(main_scene);
             primaryStage.show();
         } 
